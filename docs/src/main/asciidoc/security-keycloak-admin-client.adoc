@@ -209,6 +209,11 @@ quarkus.tls.kc-mtls.trust-store.p12.path=client-truststore.p12
 quarkus.tls.kc-mtls.trust-store.p12.password=secret
 ----
 
+== Overcoming blocked thread when using a reactive pipeline
+
+Some of the methods on the Keycloak admin client block the thread which result in an exception when you use the admin client in a reactive pipeline.
+
+At the most basic level, you can deal with that at the entry-point 
 == Testing
 
 The preferred approach for testing Keycloak Admin Client against Keycloak is xref:security-openid-connect-dev-services.adoc[Dev Services for Keycloak].
